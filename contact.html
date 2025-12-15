@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>La Casa de la Revolución Contact Information</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/styles.css">
+	<meta name="description" content="La Casa de la Revolución – A boutique hotel inspired by the Mexican Revolution, offering themed suites like the Zapata Suite and Villa Chamber with historic ambiance and modern amenities.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>La Casa de la Revolución</h1>
+  </header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms/zapata_suite.html">Zapata Suite</a></li>
+    <li><a href="rooms/villa_chamber.html">Villa Chamber</a></li>
+    <li><a href="events/fiestas_revolution.html">Revolution Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+ <main>
+  <h3>Contact Us – ¡Tierra y Libertad!</h3>
+  <p>Send us a message to inquire about staying at La Casa de la Revolución. We'll respond promptly.</p>
+  
+  <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="room">Interested In:</label><br>
+    <select id="room" name="room" required>
+      <option value="">Select an option</option>
+      <option value="zapata">Zapata Suite</option>
+      <option value="villa">Villa Chamber</option>
+      <option value="events">Revolution Events</option>
+      <option value="general">General Inquiry</option>
+    </select><br><br>
+    
+    <label>Inquiry Type:</label><br>
+    <input type="radio" id="booking" name="type" value="booking" required>
+    <label for="booking">Reservation Booking</label><br>
+    <input type="radio" id="info" name="type" value="info">
+    <label for="info">More Information</label><br>
+    <input type="radio" id="other" name="type" value="other">
+    <label for="other">Other</label><br><br>
+    
+    <label for="message">Your Message:</label><br>
+    <textarea id="message" name="message" rows="6" cols="50" required placeholder="Tell us how we can help with your revolutionary escape..."></textarea><br><br>
+    
+    <input type="submit" value="Send Message">
+    <input type="reset" value="Clear Form">
+  </form>
+</main>
+<footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:jgrado@amarillocollege.com">Joel Grado</a>
+</footer>
+</div>
+</body>
+</html>
