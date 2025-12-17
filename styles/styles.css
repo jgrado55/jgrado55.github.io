@@ -1,0 +1,294 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Mexican flag colors defined as variables */
+:root {
+    --mex-green: #006400;
+    --mex-white: #ffffff;
+    --mex-red: #c41e3a;
+    --cream: #fffef5;
+    --sand: #f4e4bc;
+    --dark-brown: #3b2b1a;
+}
+
+/* Page background */
+body {
+    background: var(--sand);
+    font-family: Georgia, serif;
+    color: var(--dark-brown);
+    line-height: 1.7;
+}
+
+/* Main container */
+#wrapper {
+    max-width: 960px;
+    margin: 30px auto;
+    background: var(--cream);
+    border: 10px solid var(--mex-red);
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    overflow: hidden; /* clears floats */
+}
+
+/* Header */
+header {
+    background: var(--mex-green) url('../images/logo.jpg') no-repeat 20px center;
+    background-size: 90px;
+    padding: 25px 20px 25px 180px;
+    min-height: 100px;
+    border-bottom: 5px solid var(--mex-red);
+}
+
+h1 {
+    font-size: 42px;
+    color: var(--mex-white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Left navigation – desktop (side position) */
+nav {
+    float: left;
+    width: 180px;
+    background: var(--mex-green);
+    position: sticky;
+    top: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 14px 20px;
+    color: var(--mex-white);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+nav a:hover {
+    background: var(--mex-red);
+}
+
+/* Main content area – desktop */
+main {
+    margin-left: 200px;
+    padding: 30px;
+    background: var(--mex-white);
+}
+
+main h2 {
+    font-size: 32px;
+    color: var(--mex-red);
+    margin: 25px 0 15px;
+    border-bottom: 3px solid var(--mex-green);
+    padding-bottom: 8px;
+}
+
+main h3 {
+    font-size: 22px;
+    color: var(--mex-green);
+    margin: 20px 0 12px;
+}
+
+/* Images in content */
+main img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 20px auto;
+    border: 6px solid var(--mex-red);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    clear: both;
+    background: var(--mex-green);
+    color: var(--mex-white);
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+footer a { 
+    color: #ffcc00; 
+}
+
+/* Price table styling */
+.price-table {
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background: var(--mex-white);
+    border: 3px solid var(--mex-green);
+}
+
+.price-table th {
+    background: var(--mex-red);
+    color: var(--mex-white);
+    padding: 12px;
+    text-align: left;
+}
+
+.price-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--mex-green);
+}
+
+.price-table tbody tr:hover {
+    background: #fff0f0;
+}
+
+.price-table strong {
+    color: var(--mex-red);
+}
+
+/* Contact form */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--cream);
+    border: 2px solid var(--mex-green);
+}
+
+label {
+    font-weight: bold;
+    color: var(--mex-green);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid var(--mex-red);
+    font-family: Georgia, serif;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: var(--mex-green);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: var(--mex-red);
+}
+
+/* Mobile styles – tablets and phones (max-width 768px) */
+@media (max-width: 768px) {
+    #wrapper {
+        margin: 10px auto;
+        padding: 10px;
+        border-width: 8px;
+    }
+
+    header {
+        background-size: 70px;
+        padding: 20px 15px 20px 100px;
+    }
+
+    h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    /* Stack navigation above content on mobile */
+    nav {
+        float: none;
+        width: 100%;
+        position: static;
+        top: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        flex: 1 1 50%; /* two links per row on tablets */
+    }
+
+    nav a {
+        text-align: center;
+        padding: 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+
+    .price-table {
+        font-size: 14px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+/* Extra small phones – make nav links full-width */
+@media (max-width: 480px) {
+    nav li {
+        flex: 1 1 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    header {
+        padding: 15px 10px 15px 80px;
+        background-size: 60px;
+    }
+}
+
+/* Map styling */
+.map-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: var(--cream);
+    padding: 10px;
+    border: 2px solid var(--mex-green);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px; 
+}
+
+/* Make map more responsive on small screens */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 350px;
+    }
+}

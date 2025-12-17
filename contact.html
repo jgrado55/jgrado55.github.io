@@ -3,9 +3,16 @@
 <head>
 	<title>La Casa de la Revolución Contact Information</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../styles/styles.css">
+	<link rel="stylesheet" href="styles/styles.css"> <!-- Adjust path if needed, e.g., ../styles/styles.css -->
 	<meta name="description" content="La Casa de la Revolución – A boutique hotel inspired by the Mexican Revolution, offering themed suites like the Zapata Suite and Villa Chamber with historic ambiance and modern amenities.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+  	$(document).ready(function() {
+    	$("main img").hide();
+    	$("main img").fadeIn(3000);
+  		});
+	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -55,6 +62,21 @@
     <input type="submit" value="Send Message">
     <input type="reset" value="Clear Form">
   </form>
+
+   <!-- Interactive Map Section -->
+  <h4>Our Location</h4>
+  <p>Visit us at our historic location in the revolutionary heart of northern Mexico.<br>
+     <strong>Address:</strong> Calle Revolución 1910, Centro, Valle de Zaragoza, Chihuahua, Mexico</p>
+  <div class="map-container">
+   <iframe 
+    width="100" 
+    height="450" 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-105.8258%2C27.441%2C-105.7788%2C27.467&amp;layer=mapnik&amp;marker=27.454%2C-105.802" 
+    style="border: 3px solid var(--mex-red); border-radius: 8px;">
+</iframe>
+  </div>
+  <p style="text-align: center;"><small><a href="https://www.openstreetmap.org/?mlat=27.454&amp;mlon=-105.802#map=15/27.454/-105.802" target="_blank">View Larger Map</a></small></p>
+  
 </main>
 <footer>
   Copyright &copy; 2025<br>
